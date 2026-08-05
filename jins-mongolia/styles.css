@@ -52,7 +52,9 @@ body{
   font:400 16px/1.6 var(--sans);
   -webkit-font-smoothing:antialiased;
 }
-img{max-width:100%;display:block}
+/* height:auto is load-bearing — the width/height attributes would otherwise
+   pin the rendered height and stretch any image sized by CSS width alone. */
+img{max-width:100%;height:auto;display:block}
 h1,h2,h3{margin:0;font-weight:400}
 p{margin:0}
 ul{margin:0;padding:0;list-style:none}
